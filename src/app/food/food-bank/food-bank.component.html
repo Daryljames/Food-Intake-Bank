@@ -1,0 +1,47 @@
+<div class="container">
+  <h4>Your Food Bank for Today</h4>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">
+    <h5>{{ foodList.meal }}</h5>
+  </div>
+
+  <div class="card-body">
+    <div class="container text-center mb-1">
+      <div *ngIf="foodList.foodItems.length == 0">
+        <p>No Food in the bank yet</p>
+      </div>
+
+      <div *ngIf="foodList.foodItems.length > 0">
+        <div class="row align-items-start">
+          <div class="col"><strong>Food</strong></div>
+          <div class="col"><strong>Calories</strong></div>
+          <div class="col"><strong>Quantity</strong></div>
+          <div class="col"><strong>Measure</strong></div>
+          <div class="col"><strong>Added On</strong></div>
+        </div>
+        <div
+          class="row align-items-start"
+          *ngFor="let food of foodList.foodItems"
+        >
+          <div class="col">
+            <p>{{ food.foodName }}</p>
+          </div>
+          <div class="col">
+            <p>{{ food.calorie }}</p>
+          </div>
+          <div class="col">
+            <p>{{ food.quantity }}</p>
+          </div>
+          <div class="col">
+            <p>{{ food.measure }}</p>
+          </div>
+          <div class="col">
+            <p>{{ food.createdOn }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

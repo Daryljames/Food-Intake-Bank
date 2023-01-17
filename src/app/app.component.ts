@@ -1,10 +1,141 @@
 import { Component } from '@angular/core';
+import { FoodList } from './models/food-list';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'food-intake';
+  title: string = 'My Food Intake Bank';
+
+  foodLists: FoodList[] = [
+    {
+      meal: 'Breakfast',
+      foodItems: [
+        {
+          id: 3,
+          foodId: 3,
+          foodName: 'Bacon',
+          calorie: 90,
+          userId: 1,
+          quantity: 2,
+          measure: 'slices',
+          meal: 'breakfast',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 1,
+          foodId: 1,
+          foodName: 'Rice',
+          calorie: 121,
+          userId: 1,
+          quantity: 1,
+          measure: 'cup',
+          meal: 'breakfast',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 2,
+          foodId: 2,
+          foodName: 'Egg',
+          calorie: 70,
+          userId: 1,
+          quantity: 1,
+          measure: 'large',
+          meal: 'breakfast',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+      ],
+    },
+    {
+      meal: 'Lunch',
+      foodItems: [
+        {
+          id: 4,
+          foodId: 4,
+          foodName: 'Adobo',
+          calorie: 90,
+          userId: 1,
+          quantity: 2,
+          measure: 'cup',
+          meal: 'lunch',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 5,
+          foodId: 5,
+          foodName: 'Steamed Rice',
+          calorie: 121,
+          userId: 1,
+          quantity: 1,
+          measure: 'cup',
+          meal: 'lunch',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 6,
+          foodId: 6,
+          foodName: 'Sinigang',
+          calorie: 70,
+          userId: 1,
+          quantity: 1,
+          measure: 'cup',
+          meal: 'lunch',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+      ],
+    },
+    {
+      meal: 'Dinner',
+      foodItems: [
+        {
+          id: 7,
+          foodId: 7,
+          foodName: 'Fried Chicken',
+          calorie: 90,
+          userId: 1,
+          quantity: 2,
+          measure: 'pieces',
+          meal: 'dinner',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 8,
+          foodId: 8,
+          foodName: 'Fried Rice',
+          calorie: 121,
+          userId: 1,
+          quantity: 1,
+          measure: 'cup',
+          meal: 'lunch',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+        {
+          id: 9,
+          foodId: 9,
+          foodName: 'Fried Talong',
+          calorie: 70,
+          userId: 1,
+          quantity: 1,
+          measure: 'large',
+          meal: 'lunch',
+          createdOn: 'Jan 17, 2023',
+          lastUpdatedOn: 'Jan 17, 2023',
+        },
+      ],
+    },
+    {
+      meal: 'Snack',
+      foodItems: [],
+    },
+  ];
 }

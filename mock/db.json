@@ -1,0 +1,97 @@
+{
+  "my_foods": [
+    {
+      "id": 1,
+      "food_id": 1,
+      "user_id": 1,
+      "quantity": 1,
+      "measure": "cup",
+      "meal": "breakfast",
+      "createdOn": "15:00",
+      "lastUpdatedOn": "15:00"
+    },
+    {
+      "id": 2,
+      "food_id": 2,
+      "user_id": 1,
+      "quantity": 1,
+      "measure": "large",
+      "meal": "breakfast",
+      "createdOn": "15:01",
+      "lastUpdatedOn": "15:01"
+    },
+    {
+      "id": 3,
+      "food_id": 3,
+      "user_id": 1,
+      "quantity": 2,
+      "measure": "slice",
+      "meal": "breakfast",
+      "createdOn": "15:02",
+      "lastUpdatedOn": "15:02"
+    }
+  ],
+
+  "foods": [
+    {
+      "id": 1,
+      "name": "Rice",
+      "calorie": 121,
+      "createdOn": "15:01",
+      "createdBy": "John Admin",
+      "lastUpdatedOn": "15:01",
+      "lastUpdatedBy": "John Admin"
+    },
+    {
+      "id": 2,
+      "name": "Egg",
+      "calorie": 71,
+      "createdOn": "15:01",
+      "createdBy": "John Admin",
+      "lastUpdatedOn": "15:01",
+      "lastUpdatedBy": "John Admin"
+    },
+    {
+      "id": 3,
+      "name": "Bacon",
+      "calorie": 90,
+      "createdOn": "15:01",
+      "createdBy": "John Admin",
+      "lastUpdatedOn": "15:01",
+      "lastUpdatedBy": "John Admin"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "middleName": "Powers",
+      "lastName": "Smith",
+      "age": 20,
+      "weight": 80,
+      "weightType": "kilogram",
+      "height": 5.4,
+      "heightType": "inch",
+      "userType": "user",
+      "calorieGoal": 2000,
+      "email": "test@email.com",
+      "password": "123test"
+    },
+    {
+      "id": 1,
+      "firstName": "John",
+      "middleName": "Powers",
+      "lastName": "Admin",
+      "age": 20,
+      "weight": 80,
+      "weightType": "kilograms",
+      "height": 5.4,
+      "heightType": "inches",
+      "userType": "admin",
+      "calorieGoal": 2000,
+      "email": "test1@email.com",
+      "password": "123test"
+    }
+  ]
+}
