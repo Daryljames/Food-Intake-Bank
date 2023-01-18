@@ -13,12 +13,12 @@ export class AppComponent {
 
   foodLists: FoodList[] = [
     {
-      meal: 'breakfast',
+      meal: 'Breakfast',
       foodItems: [],
     },
-    { meal: 'lunch', foodItems: [] },
-    { meal: 'dinner', foodItems: [] },
-    { meal: 'snack', foodItems: [] },
+    { meal: 'Lunch', foodItems: [] },
+    { meal: 'Dinner', foodItems: [] },
+    { meal: 'Snack', foodItems: [] },
   ];
 
   users: User[] = [
