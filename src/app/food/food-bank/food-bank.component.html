@@ -16,25 +16,34 @@
           <div class="col"><strong>Quantity</strong></div>
           <div class="col"><strong>Measure</strong></div>
           <div class="col"><strong>Added On</strong></div>
+          <div class="col"><strong>Remove</strong></div>
         </div>
         <div
           class="row align-items-start"
           *ngFor="let food of foodList.foodItems"
         >
           <div class="col">
-            <p>{{ food.foodName }}</p>
+            <p class="fs-5">{{ food.foodName }}</p>
           </div>
           <div class="col">
-            <p>{{ food.calorie }}</p>
+            <p class="fs-5">{{ food.calorie }}</p>
           </div>
           <div class="col">
-            <p>{{ food.quantity }}</p>
+            <p class="fs-5">{{ food.quantity }}</p>
           </div>
           <div class="col">
-            <p>{{ food.measure }}</p>
+            <p class="fs-5">{{ food.measure }}</p>
           </div>
           <div class="col">
-            <p>{{ food.createdOn }}</p>
+            <p class="fs-5">{{ food.createdOn }}</p>
+          </div>
+          <div class="col">
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteFoodItem(food)"
+            >
+              x
+            </button>
           </div>
         </div>
       </div>

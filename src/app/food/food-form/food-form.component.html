@@ -1,9 +1,8 @@
 <div class="card">
   <div class="card-body">
     <div class="form-group col-6">
-      <label>Meal Type</label>
+      <label>Please Select Meal Type</label>
       <select name="" id="" class="form-control" [(ngModel)]="foodItem.meal">
-        <option selected disabled>Click here to select</option>
         <option value="Breakfast">Breakast</option>
         <option value="Lunch">Lunch</option>
         <option value="Dinner">Dinner</option>
@@ -15,16 +14,32 @@
 
     <div class="form-group mb-4">
       <h5>Insert in Food Bank:</h5>
+      <div class="row">
+        <div class="col-4">
+          <label>Date</label>
+          <input
+            type="date"
+            class="form-control"
+            [(ngModel)]="foodItem.createdOn"
+          />
+        </div>
+      </div>
+
       <label>Name</label>
       <input type="text" class="form-control" [(ngModel)]="foodItem.foodName" />
-      <label>Calorie</label>
-      <input
-        type="number"
-        class="form-control"
-        min="0"
-        [(ngModel)]="foodItem.calorie"
-      />
+
+      <div class="row"></div>
+
       <div class="row">
+        <div class="col-2">
+          <label>Calories</label>
+          <input
+            type="number"
+            class="form-control"
+            min="0"
+            [(ngModel)]="foodItem.calorie"
+          />
+        </div>
         <div class="col-2">
           <label>Quantity</label>
           <input
@@ -61,6 +76,6 @@
   </div>
 </div>
 
-<button class="btn btn-primary mt-2 mb-4" (click)="btnClicked()">
+<button type="submit" class="btn btn-primary mt-2 mb-4" (click)="btnClicked()">
   Add Food
 </button>

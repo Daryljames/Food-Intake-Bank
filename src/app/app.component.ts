@@ -11,6 +11,8 @@ import { User } from './models/user';
 export class AppComponent {
   title: string = 'My Food Intake Bank';
 
+  foodItem: FoodItem[] = [];
+
   foodLists: FoodList[] = [
     {
       meal: 'Breakfast',
