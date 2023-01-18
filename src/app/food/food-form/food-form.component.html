@@ -2,8 +2,8 @@
   <div class="card-body">
     <div class="form-group col-6">
       <label>Meal Type</label>
-      <select name="" id="" class="form-control">
-        <option selected disabled></option>
+      <select name="" id="" class="form-control" [(ngModel)]="foodItem.meal">
+        <option selected disabled>Click here to select</option>
         <option value="breakfast">Breakast</option>
         <option value="lunch">Lunch</option>
         <option value="dinner">Dinner</option>
@@ -16,28 +16,44 @@
     <div class="form-group mb-4">
       <h5>Insert in Food Bank:</h5>
       <label>Name</label>
-      <input type="text" class="form-control" />
+      <input type="text" class="form-control" [(ngModel)]="foodItem.foodName" />
       <label>Calorie</label>
-      <input type="number" class="form-control" min="0" />
+      <input
+        type="number"
+        class="form-control"
+        min="0"
+        [(ngModel)]="foodItem.calorie"
+      />
       <div class="row">
         <div class="col-2">
           <label>Quantity</label>
-          <input type="number" class="form-control" min="0" max="100" />
+          <input
+            type="number"
+            class="form-control"
+            min="0"
+            max="100"
+            [(ngModel)]="foodItem.quantity"
+          />
         </div>
         <div class="col-4">
           <label>Servings</label>
-          <select name="" id="" class="form-control">
+          <select
+            name=""
+            id=""
+            class="form-control"
+            [(ngModel)]="foodItem.measure"
+          >
             <option selected disabled></option>
-            <option value="breakfast">slice/s</option>
-            <option value="lunch">piece/s</option>
-            <option value="dinner">gram/s</option>
-            <option value="snack">liter/s</option>
-            <option value="lunch">cup/s</option>
-            <option value="dinner">glass/es</option>
-            <option value="snack">tbsp</option>
-            <option value="snack">small</option>
-            <option value="snack">medium</option>
-            <option value="snack">large</option>
+            <option value="slice/s">slice/s</option>
+            <option value="piece/s">piece/s</option>
+            <option value="gram/s">gram/s</option>
+            <option value="liter/s">liter/s</option>
+            <option value="cup/s">cup/s</option>
+            <option value="glass/es">glass/es</option>
+            <option value="tbsp">tbsp</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
           </select>
         </div>
       </div>

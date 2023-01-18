@@ -7,7 +7,7 @@
       <hr />
       <div class="row">
         <div class="col">
-          <p class="fs-4 mb-0">2000</p>
+          <p class="fs-4 mb-0">{{ user.calorieGoal }}</p>
           <p class="fs-6">GOAL</p>
         </div>
         <div class="col">
@@ -32,8 +32,12 @@
     <div>
       <p>Current Weight and Height</p>
       <div class="row">
-        <div class="col"><p>80 kilogram</p></div>
-        <div class="col"><p>5'4" inches</p></div>
+        <div class="col">
+          <p>{{ user.weight }} {{ user.weightType }}</p>
+        </div>
+        <div class="col">
+          <p>{{ user.height }} {{ user.heightType }}</p>
+        </div>
       </div>
     </div>
   </div>

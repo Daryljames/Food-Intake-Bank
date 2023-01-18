@@ -1,12 +1,10 @@
 export interface FoodItem {
-  id: number;
-  foodId: number;
+  id?: number;
   foodName: string;
   calorie: number;
-  userId: number;
   quantity: number;
   measure: string;
   meal: string;
-  createdOn: string;
-  lastUpdatedOn: string;
+  createdOn?: string;
+  lastUpdatedOn?: string;
 }

@@ -7,10 +7,18 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FoodFormComponent } from './food/food-form/food-form.component';
 import { FoodBankComponent } from './food/food-bank/food-bank.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, UserComponent, HeaderComponent, FooterComponent, FoodFormComponent, FoodBankComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    UserComponent,
+    HeaderComponent,
+    FooterComponent,
+    FoodFormComponent,
+    FoodBankComponent,
+  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { FoodItem } from './models/food-item';
 import { FoodList } from './models/food-list';
+import { User } from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -11,131 +13,40 @@ export class AppComponent {
 
   foodLists: FoodList[] = [
     {
-      meal: 'Breakfast',
-      foodItems: [
-        {
-          id: 3,
-          foodId: 3,
-          foodName: 'Bacon',
-          calorie: 90,
-          userId: 1,
-          quantity: 2,
-          measure: 'slices',
-          meal: 'breakfast',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 1,
-          foodId: 1,
-          foodName: 'Rice',
-          calorie: 121,
-          userId: 1,
-          quantity: 1,
-          measure: 'cup',
-          meal: 'breakfast',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 2,
-          foodId: 2,
-          foodName: 'Egg',
-          calorie: 70,
-          userId: 1,
-          quantity: 1,
-          measure: 'large',
-          meal: 'breakfast',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-      ],
-    },
-    {
-      meal: 'Lunch',
-      foodItems: [
-        {
-          id: 4,
-          foodId: 4,
-          foodName: 'Adobo',
-          calorie: 90,
-          userId: 1,
-          quantity: 2,
-          measure: 'cup',
-          meal: 'lunch',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 5,
-          foodId: 5,
-          foodName: 'Steamed Rice',
-          calorie: 121,
-          userId: 1,
-          quantity: 1,
-          measure: 'cup',
-          meal: 'lunch',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 6,
-          foodId: 6,
-          foodName: 'Sinigang',
-          calorie: 70,
-          userId: 1,
-          quantity: 1,
-          measure: 'cup',
-          meal: 'lunch',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-      ],
-    },
-    {
-      meal: 'Dinner',
-      foodItems: [
-        {
-          id: 7,
-          foodId: 7,
-          foodName: 'Fried Chicken',
-          calorie: 90,
-          userId: 1,
-          quantity: 2,
-          measure: 'pieces',
-          meal: 'dinner',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 8,
-          foodId: 8,
-          foodName: 'Fried Rice',
-          calorie: 121,
-          userId: 1,
-          quantity: 1,
-          measure: 'cup',
-          meal: 'lunch',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-        {
-          id: 9,
-          foodId: 9,
-          foodName: 'Fried Talong',
-          calorie: 70,
-          userId: 1,
-          quantity: 1,
-          measure: 'large',
-          meal: 'lunch',
-          createdOn: 'Jan 17, 2023',
-          lastUpdatedOn: 'Jan 17, 2023',
-        },
-      ],
-    },
-    {
-      meal: 'Snack',
+      meal: 'breakfast',
       foodItems: [],
     },
+    { meal: 'lunch', foodItems: [] },
+    { meal: 'dinner', foodItems: [] },
+    { meal: 'snack', foodItems: [] },
   ];
+
+  users: User[] = [
+    {
+      id: 1,
+      firstName: 'John',
+      middleName: 'Powers',
+      lastName: 'Smith',
+      age: 20,
+      weight: 80,
+      weightType: 'kilogram',
+      height: 5.4,
+      heightType: 'inch',
+      userType: 'user',
+      calorieGoal: 2000,
+      email: 'test@email.com',
+      password: '123test',
+    },
+  ];
+
+  formEventHandler = (payload: FoodItem) => {
+    console.log('Handling formEventHandler...');
+    console.log(payload);
+
+    this.foodLists.forEach((o) => {
+      if (o.meal == payload.meal) {
+        o.foodItems.push({ ...payload });
+      }
+    });
+  };
 }
