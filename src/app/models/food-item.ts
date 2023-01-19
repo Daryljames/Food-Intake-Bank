@@ -5,6 +5,7 @@ export interface FoodItem {
   quantity: number;
   measure: string;
   meal: string;
+  editable: boolean;
   createdOn?: string;
   lastUpdatedOn?: string;
 }

@@ -60,13 +60,58 @@ export class AppComponent {
         this.totalFoodCalories = this.foodCalorie.computeAllCalories(
           this.foodLists
         );
-        console.log(this.totalFoodCalories);
-        console.log(this.remainingCalories);
+        // console.log(this.totalFoodCalories);
+        // console.log(this.remainingCalories);
       }
     });
     this.remainingCalories = this.foodCalorie.computeRemainingCalories(
       this.users,
       this.totalFoodCalories
     );
+  };
+
+  foodEditHandler = (payload: FoodItem) => {
+    let index = payload.id;
+    // console.log(payload);
+    // console.log(index);
+
+    this.foodLists.forEach((o) => {
+      if (o.meal == payload.meal) {
+        o.foodItems[index!].foodName = payload.foodName;
+        o.foodItems[index!].calorie = payload.calorie;
+        o.foodItems[index!].measure = payload.measure;
+        o.foodItems[index!].quantity = payload.quantity;
+        o.foodItems[index!].createdOn = payload.createdOn;
+
+        console.log(o.foodItems[index!]);
+
+        this.totalFoodCalories = this.foodCalorie.computeAllCalories(
+          this.foodLists
+        );
+      }
+    });
+    this.remainingCalories = this.foodCalorie.computeRemainingCalories(
+      this.users,
+      this.totalFoodCalories
+    );
+  };
+
+  foodDeleteHandler = (payload: FoodItem[]) => {
+    console.log(payload);
+
+    payload.forEach((o) => {
+      let removedCal = o.calorie;
+      console.log(removedCal);
+
+      this.totalFoodCalories = this.foodCalorie.caloriesAfterRemoval(
+        removedCal,
+        this.totalFoodCalories
+      );
+
+      this.remainingCalories = this.foodCalorie.computeRemainingCalories(
+        this.users,
+        this.totalFoodCalories
+      );
+    });
   };
 }

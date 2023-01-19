@@ -13,16 +13,17 @@ export class FoodFormComponent {
     quantity: 0,
     measure: '',
     meal: '',
+    editable: false,
   };
 
   @Output() formEvent: EventEmitter<FoodItem> = new EventEmitter<FoodItem>();
 
   btnClicked = () => {
     // console.log('Button was clicked');
-
+    // console.log(this.foodItem);
     // copying the actual object into o
     let o = { ...this.foodItem };
-
+    // console.log(o);
     this.formEvent.emit(o);
 
     this.foodItem.foodName = '';
@@ -31,5 +32,6 @@ export class FoodFormComponent {
     this.foodItem.measure = '';
     this.foodItem.meal = '';
     this.foodItem.createdOn = '';
+    this.foodItem.editable = false;
   };
 }

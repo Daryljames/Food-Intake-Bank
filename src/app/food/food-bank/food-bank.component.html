@@ -19,35 +19,92 @@
           <div class="col"><strong>Added On</strong></div>
           <div class="col"><strong>Remove</strong></div>
         </div>
-        <div
-          class="row align-items-start"
-          *ngFor="let food of foodList.foodItems"
-        >
-          <div class="col">
-            <button class="btn btn-secondary btn-sm">Edit</button>
+        <div *ngFor="let food of foodList.foodItems">
+          <div class="row align-items-start" *ngIf="food.editable == false">
+            <div class="col">
+              <button
+                class="btn btn-warning btn-sm"
+                (click)="editFoodItem(food)"
+              >
+                Edit
+              </button>
+            </div>
+            <div class="col">
+              <p class="fs-5">{{ food.foodName }}</p>
+            </div>
+            <div class="col">
+              <p class="fs-5">{{ food.calorie }}</p>
+            </div>
+            <div class="col">
+              <p class="fs-5">{{ food.quantity }}</p>
+            </div>
+            <div class="col">
+              <p class="fs-5">{{ food.measure }}</p>
+            </div>
+            <div class="col">
+              <p class="fs-5">{{ food.createdOn }}</p>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteFoodItem(food)"
+              >
+                x
+              </button>
+            </div>
           </div>
-          <div class="col">
-            <p class="fs-5">{{ food.foodName }}</p>
-          </div>
-          <div class="col">
-            <p class="fs-5">{{ food.calorie }}</p>
-          </div>
-          <div class="col">
-            <p class="fs-5">{{ food.quantity }}</p>
-          </div>
-          <div class="col">
-            <p class="fs-5">{{ food.measure }}</p>
-          </div>
-          <div class="col">
-            <p class="fs-5">{{ food.createdOn }}</p>
-          </div>
-          <div class="col">
-            <button
-              class="btn btn-danger btn-sm"
-              (click)="deleteFoodItem(food)"
-            >
-              x
-            </button>
+          <div class="row align-items-start" *ngIf="food.editable == true">
+            <div class="col">
+              <button
+                class="btn btn-primary btn-sm"
+                (click)="saveFoodItem(food)"
+              >
+                Save
+              </button>
+            </div>
+            <div class="col form-group">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="food.foodName"
+              />
+            </div>
+            <div class="col form-group">
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="food.calorie"
+              />
+            </div>
+            <div class="col form-group">
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="food.quantity"
+              />
+            </div>
+            <div class="col form-group">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="food.measure"
+              />
+            </div>
+            <div class="col form-group">
+              <input
+                type="date"
+                class="form-control"
+                [(ngModel)]="food.createdOn"
+              />
+            </div>
+            <div class="col form-group">
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteFoodItem(food)"
+              >
+                x
+              </button>
+            </div>
           </div>
         </div>
       </div>

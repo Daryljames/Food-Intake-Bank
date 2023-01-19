@@ -24,5 +24,7 @@
   <app-food-bank
     *ngFor="let foodList of foodLists"
     [foodList]="foodList"
+    (foodEditHandler)="foodEditHandler($event)"
+    (foodDeleteHandler)="foodDeleteHandler($event)"
   ></app-food-bank>
 </div>

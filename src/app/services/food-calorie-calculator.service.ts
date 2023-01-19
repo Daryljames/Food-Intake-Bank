@@ -22,6 +22,25 @@ export class FoodCalorieCalculatorService {
     return total;
   };
 
+  caloriesAfterRemoval = (
+    removedCalorie: number,
+    totalCalories: number
+  ): number => {
+    let total = 0.0;
+    // iterate all fooditems
+    total = totalCalories - removedCalorie;
+    // total = this.computeAllCalories(food);
+
+    // food.forEach((item: FoodList) => {
+    //   item.foodItems.forEach((food: FoodItem) => {
+    //     total = food.calorie * food.quantity;
+    console.log(total);
+    //   });
+    // });
+    // console.log(total);
+    return total;
+  };
+
   computeRemainingCalories = (user: User[], calorie: number): number => {
     let remainingCalories = 0;
     // let totalFoodCalories = this.computeAllCalories(foodItem);
