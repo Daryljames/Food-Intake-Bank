@@ -3,7 +3,9 @@
     <div>
       <h5>Goals and Information</h5>
       <p class="mb-0">Calories Remaining:</p>
-      <p class="fs-2 text-success"><strong>1000</strong></p>
+      <p class="fs-2 text-success">
+        <strong>{{ remainingCalories }}</strong>
+      </p>
       <hr />
       <div class="row">
         <div class="col">
@@ -14,14 +16,14 @@
           <p class="mt-3">-</p>
         </div>
         <div class="col">
-          <p class="fs-4 mb-0">1000</p>
+          <p class="fs-4 mb-0">{{ totalFoodCalories }}</p>
           <p class="fs-6">FOOD</p>
         </div>
         <div class="col">
           <p class="mt-3">=</p>
         </div>
         <div class="col">
-          <p class="fs-4 mb-0">1000</p>
+          <p class="fs-4 mb-0">{{ remainingCalories }}</p>
           <p class="fs-6">NET</p>
         </div>
       </div>

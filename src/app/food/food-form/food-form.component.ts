@@ -18,7 +18,7 @@ export class FoodFormComponent {
   @Output() formEvent: EventEmitter<FoodItem> = new EventEmitter<FoodItem>();
 
   btnClicked = () => {
-    console.log('Button was clicked');
+    // console.log('Button was clicked');
 
     // copying the actual object into o
     let o = { ...this.foodItem };
