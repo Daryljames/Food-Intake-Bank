@@ -49,17 +49,16 @@ export class AppComponent implements OnInit {
 
     this.foodItemsService.getall().subscribe((foodItems) => {
       this.foodLists = foodItems;
-      console.log(foodItems);
+      // console.log(foodItems);
       this.totalFoodCalories = this.foodCalorie.computeAllCalories(
         this.foodLists
       );
+      console.log(this.totalFoodCalories);
       this.remainingCalories = this.foodCalorie.computeRemainingCalories(
         this.users,
         this.totalFoodCalories
       );
     });
-
-    console.log(this.totalFoodCalories);
   }
 
   formEventHandler = (payload: FoodItem) => {
@@ -69,13 +68,14 @@ export class AppComponent implements OnInit {
     this.foodLists.forEach((o) => {
       if (o.meal == payload.meal) {
         o.foodItems.push({ ...payload });
+        console.log(this.totalFoodCalories);
         console.log(payload);
         // computes all calories
         this.totalFoodCalories = this.foodCalorie.computeAllCalories(
           this.foodLists
         );
-        // console.log(this.totalFoodCalories);
-        // console.log(this.remainingCalories);
+        console.log(this.totalFoodCalories);
+        console.log(this.remainingCalories);
       }
     });
     this.remainingCalories = this.foodCalorie.computeRemainingCalories(
