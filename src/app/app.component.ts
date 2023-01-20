@@ -108,7 +108,7 @@ export class AppComponent {
         removedQuantity,
         this.totalFoodCalories
       );
-
+      console.log(payload);
       this.remainingCalories = this.foodCalorie.computeRemainingCalories(
         this.users,
         this.totalFoodCalories
