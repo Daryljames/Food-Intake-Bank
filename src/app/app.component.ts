@@ -55,7 +55,7 @@ export class AppComponent {
     this.foodLists.forEach((o) => {
       if (o.meal == payload.meal) {
         o.foodItems.push({ ...payload });
-
+        console.log(payload);
         // computes all calories
         this.totalFoodCalories = this.foodCalorie.computeAllCalories(
           this.foodLists
