@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col">
+    <app-food-form (formEvent)="formEventHandler($event)"></app-food-form>
+  </div>
+  <div class="col">
+    <app-user
+      *ngFor="let user of users"
+      [user]="user"
+      [totalFoodCalories]="totalFoodCalories"
+      [remainingCalories]="remainingCalories"
+    ></app-user>
+    <!-- [user]             "app component"-->
+  </div>
+</div>
+
+<div class="mb-3"></div>
+
+<div class="container">
+  <h4>Your Food Bank for Today</h4>
+</div>
+<app-food-bank
+  *ngFor="let foodList of foodLists"
+  [foodList]="foodList"
+  (foodEditHandler)="foodEditHandler($event)"
+  (foodDeleteHandler)="foodDeleteHandler($event)"
+></app-food-bank>

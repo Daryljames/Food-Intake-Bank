@@ -25,4 +25,12 @@ export class FoodItemsService {
 
     return foods;
   };
+
+  getById = (id: number): Observable<FoodItem> => {
+    let item: Observable<FoodItem>;
+
+    item = this.http.get<FoodItem>(`${this.baseUrl}/foods/${id}`, httpOptions);
+
+    return item;
+  };
 }

@@ -11,8 +11,8 @@
           "measure": "cup/s",
           "meal": "breakfast",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         },
         {
           "id": 2,
@@ -22,8 +22,8 @@
           "measure": "small",
           "meal": "breakfast",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         },
         {
           "id": 3,
@@ -33,8 +33,8 @@
           "measure": "small",
           "meal": "breakfast",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         }
       ]
     },
@@ -42,37 +42,37 @@
       "meal": "Lunch",
       "foodItems": [
         {
-          "id": 1,
+          "id": 4,
           "foodName": "Rice",
           "calorie": 121,
           "quantity": 1,
           "measure": "cup/s",
           "meal": "Lunch",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         },
         {
-          "id": 2,
+          "id": 5,
           "foodName": "Egg",
           "calorie": 71,
           "quantity": 1,
           "measure": "small",
           "meal": "Lunch",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         },
         {
-          "id": 3,
+          "id": 6,
           "foodName": "Bacon",
           "calorie": 90,
           "quantity": 1,
           "measure": "small",
           "meal": "Lunch",
           "editable": false,
-          "createdOn": "15:01",
-          "lastUpdatedOn": "15:01"
+          "createdOn": "Jan 20, 2023",
+          "lastUpdatedOn": "Jan 20, 2023"
         }
       ]
     },
@@ -95,8 +95,8 @@
       "measure": "cup/s",
       "meal": "breakfast",
       "editable": false,
-      "createdOn": "15:01",
-      "lastUpdatedOn": "15:01"
+      "createdOn": "Jan 20, 2023",
+      "lastUpdatedOn": "Jan 20, 2023"
     },
     {
       "id": 2,
@@ -106,8 +106,8 @@
       "measure": "small",
       "meal": "breakfast",
       "editable": false,
-      "createdOn": "15:01",
-      "lastUpdatedOn": "15:01"
+      "createdOn": "Jan 20, 2023",
+      "lastUpdatedOn": "Jan 20, 2023"
     },
     {
       "id": 3,
@@ -117,8 +117,8 @@
       "measure": "small",
       "meal": "breakfast",
       "editable": false,
-      "createdOn": "15:01",
-      "lastUpdatedOn": "15:01"
+      "createdOn": "Jan 20, 2023",
+      "lastUpdatedOn": "Jan 20, 2023"
     }
   ],
 

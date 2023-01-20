@@ -53,6 +53,11 @@
               </button>
             </div>
           </div>
+          <a
+            routerLink="/myFood/{{ food.id }}"
+            class="btn btn-success w-100 mb-1"
+            >Show food</a
+          >
           <div class="row align-items-start" *ngIf="food.editable == true">
             <div class="col">
               <button
