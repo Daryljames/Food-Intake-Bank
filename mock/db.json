@@ -1,64 +1,124 @@
 {
   "my_foods": [
     {
-      "id": 1,
-      "food_id": 1,
-      "user_id": 1,
-      "quantity": 1,
-      "measure": "cup",
-      "meal": "breakfast",
-      "createdOn": "15:00",
-      "lastUpdatedOn": "15:00"
+      "meal": "Breakfast",
+      "foodItems": [
+        {
+          "id": 1,
+          "foodName": "Rice",
+          "calorie": 121,
+          "quantity": 1,
+          "measure": "cup/s",
+          "meal": "breakfast",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        },
+        {
+          "id": 2,
+          "foodName": "Egg",
+          "calorie": 71,
+          "quantity": 1,
+          "measure": "small",
+          "meal": "breakfast",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        },
+        {
+          "id": 3,
+          "foodName": "Bacon",
+          "calorie": 90,
+          "quantity": 1,
+          "measure": "small",
+          "meal": "breakfast",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        }
+      ]
     },
     {
-      "id": 2,
-      "food_id": 2,
-      "user_id": 1,
-      "quantity": 1,
-      "measure": "large",
-      "meal": "breakfast",
-      "createdOn": "15:01",
-      "lastUpdatedOn": "15:01"
+      "meal": "Lunch",
+      "foodItems": [
+        {
+          "id": 1,
+          "foodName": "Rice",
+          "calorie": 121,
+          "quantity": 1,
+          "measure": "cup/s",
+          "meal": "Lunch",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        },
+        {
+          "id": 2,
+          "foodName": "Egg",
+          "calorie": 71,
+          "quantity": 1,
+          "measure": "small",
+          "meal": "Lunch",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        },
+        {
+          "id": 3,
+          "foodName": "Bacon",
+          "calorie": 90,
+          "quantity": 1,
+          "measure": "small",
+          "meal": "Lunch",
+          "editable": false,
+          "createdOn": "15:01",
+          "lastUpdatedOn": "15:01"
+        }
+      ]
     },
     {
-      "id": 3,
-      "food_id": 3,
-      "user_id": 1,
-      "quantity": 2,
-      "measure": "slice",
-      "meal": "breakfast",
-      "createdOn": "15:02",
-      "lastUpdatedOn": "15:02"
+      "meal": "Dinner",
+      "foodItems": []
+    },
+    {
+      "meal": "Snack",
+      "foodItems": []
     }
   ],
 
   "foods": [
     {
       "id": 1,
-      "name": "Rice",
+      "foodName": "Rice",
       "calorie": 121,
+      "quantity": 1,
+      "measure": "cup/s",
+      "meal": "breakfast",
+      "editable": false,
       "createdOn": "15:01",
-      "createdBy": "John Admin",
-      "lastUpdatedOn": "15:01",
-      "lastUpdatedBy": "John Admin"
+      "lastUpdatedOn": "15:01"
     },
     {
       "id": 2,
-      "name": "Egg",
+      "foodName": "Egg",
       "calorie": 71,
+      "quantity": 1,
+      "measure": "small",
+      "meal": "breakfast",
+      "editable": false,
       "createdOn": "15:01",
-      "createdBy": "John Admin",
-      "lastUpdatedOn": "15:01",
-      "lastUpdatedBy": "John Admin"
+      "lastUpdatedOn": "15:01"
     },
     {
       "id": 3,
-      "name": "Bacon",
+      "foodName": "Bacon",
       "calorie": 90,
+      "quantity": 1,
+      "measure": "small",
+      "meal": "breakfast",
+      "editable": false,
       "createdOn": "15:01",
-      "createdBy": "John Admin",
-      "lastUpdatedOn": "15:01",
-      "lastUpdatedBy": "John Admin"
+      "lastUpdatedOn": "15:01"
     }
   ],
 

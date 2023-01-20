@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FoodFormComponent } from './food/food-form/food-form.component';
 import { FoodBankComponent } from './food/food-bank/food-bank.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     FoodFormComponent,
     FoodBankComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

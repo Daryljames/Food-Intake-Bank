@@ -1,30 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FoodItem } from './models/food-item';
 import { FoodList } from './models/food-list';
 import { User } from './models/user';
 import { FoodCalorieCalculatorService } from './services/food-calorie-calculator.service';
+import { FoodItemsService } from './services/food-items.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  constructor(private foodCalorie: FoodCalorieCalculatorService) {}
-
+export class AppComponent implements OnInit {
   title: string = 'My Food Intake Bank';
 
   foodItem: FoodItem[] = [];
 
-  foodLists: FoodList[] = [
-    {
-      meal: 'Breakfast',
-      foodItems: [],
-    },
-    { meal: 'Lunch', foodItems: [] },
-    { meal: 'Dinner', foodItems: [] },
-    { meal: 'Snack', foodItems: [] },
-  ];
+  foodLists: FoodList[] = [];
 
   users: User[] = [
     {
@@ -47,6 +38,29 @@ export class AppComponent {
   totalFoodCalories: number = 0;
 
   remainingCalories: number = 0;
+
+  constructor(
+    private foodCalorie: FoodCalorieCalculatorService,
+    private foodItemsService: FoodItemsService
+  ) {}
+
+  ngOnInit(): void {
+    console.log('ngOnInit() fired for AppComponent');
+
+    this.foodItemsService.getall().subscribe((foodItems) => {
+      this.foodLists = foodItems;
+      console.log(foodItems);
+      this.totalFoodCalories = this.foodCalorie.computeAllCalories(
+        this.foodLists
+      );
+      this.remainingCalories = this.foodCalorie.computeRemainingCalories(
+        this.users,
+        this.totalFoodCalories
+      );
+    });
+
+    console.log(this.totalFoodCalories);
+  }
 
   formEventHandler = (payload: FoodItem) => {
     // console.log('Handling formEventHandler...');
