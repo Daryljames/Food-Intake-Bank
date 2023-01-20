@@ -72,8 +72,6 @@ export class AppComponent {
 
   foodEditHandler = (payload: FoodItem) => {
     let index = payload.id;
-    // console.log(payload);
-    // console.log(index);
 
     this.foodLists.forEach((o) => {
       if (o.meal == payload.meal) {
@@ -101,10 +99,13 @@ export class AppComponent {
 
     payload.forEach((o) => {
       let removedCal = o.calorie;
+      let removedQuantity = o.quantity;
       console.log(removedCal);
+      console.log(removedQuantity);
 
       this.totalFoodCalories = this.foodCalorie.caloriesAfterRemoval(
         removedCal,
+        removedQuantity,
         this.totalFoodCalories
       );
 

@@ -24,11 +24,16 @@ export class FoodCalorieCalculatorService {
 
   caloriesAfterRemoval = (
     removedCalorie: number,
+    quantity: number,
     totalCalories: number
   ): number => {
     let total = 0.0;
     // iterate all fooditems
-    total = totalCalories - removedCalorie;
+    let removedTotal = removedCalorie * quantity;
+    console.log(removedTotal);
+    console.log(removedCalorie);
+    console.log(quantity);
+    total = totalCalories - removedTotal;
     // total = this.computeAllCalories(food);
 
     // food.forEach((item: FoodList) => {

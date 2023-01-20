@@ -53,8 +53,8 @@ export class FoodBankComponent {
     this.foodItem.id = index;
     this.foodItem.meal = this.foodList.foodItems[index].meal;
     this.foodItem.foodName = this.foodList.foodItems[index].foodName;
-    this.foodItem.quantity = this.foodList.foodItems[index].quantity;
     this.foodItem.calorie = this.foodList.foodItems[index].calorie;
+    this.foodItem.quantity = this.foodList.foodItems[index].quantity;
     this.foodItem.measure = this.foodList.foodItems[index].measure;
     this.foodItem.createdOn = this.foodList.foodItems[index].createdOn;
 
